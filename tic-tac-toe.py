@@ -6,9 +6,11 @@ def is_full(board):
 
     return True
 
+
 def check_win_row(x):
     win = True
     n = len(arr)
+
 
 #rows
     for i in range(n):
@@ -37,6 +39,7 @@ def check_win_col(x):
             return win
     return win
 
+
 def check_win_diagleft(x):
     win = False
 
@@ -44,6 +47,7 @@ def check_win_diagleft(x):
         win = True
 
     return win
+
 
 if __name__ == "__main__":
     rows, cols = (3, 3)
@@ -55,7 +59,6 @@ if __name__ == "__main__":
         print()
 
     while not is_full(arr):
-
         p1 = input("Player 1: Enter the location -> ")
         pos = list(map(int,p1.split(',')))
         arr[pos[0]][pos[1]] = 'x'
